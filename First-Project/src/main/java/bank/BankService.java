@@ -9,13 +9,13 @@ public class BankService {
         this.clientRepository = clientRepository;
     }
 
-    public void save(Client client){
+    public void save(Client client) {
         clientRepository.save(client);
 
     }
 
-    public Client FindByEmail(String email){
-return clientRepository.FindByEmail(email);
+    public Client FindByEmail(String email) {
+        return clientRepository.FindByEmail(email);
     }
 
 }

@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Stream;
 
-public class InMemoryRepostiory implements ClientRepository{
+public class InMemoryRepostiory implements ClientRepository {
 
     private Set<Client> clients;
 

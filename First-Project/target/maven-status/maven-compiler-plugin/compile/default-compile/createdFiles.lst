@@ -1,0 +1,5 @@
+bank\BankService.class
+Main.class
+repository\InMemoryRepostiory.class
+bank\Client.class
+repository\ClientRepository.class

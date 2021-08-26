@@ -12,7 +12,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-      new Main().run();
+        new Main().run();
     }
 
     private void run() {
@@ -41,15 +41,15 @@ public class Main {
 
     private void addUser(Scanner scanner) {
         System.out.println("Enter name");
-String name = scanner.next();
+        String name = scanner.next();
         System.out.println("Enter email");
         String email = scanner.next();
         System.out.println("Enter balance");
         String balance = scanner.next();
-       bankservice.save(new Client(name,email, new BigDecimal(balance)));
+        bankservice.save(new Client(name, email, new BigDecimal(balance)));
     }
 
-    private void findUser(Scanner scanner){
+    private void findUser(Scanner scanner) {
         System.out.println("Enter email");
         String email = scanner.next();
         System.out.println(bankservice.FindByEmail(email));
