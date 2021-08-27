@@ -1,14 +1,13 @@
-package repository;
+package first.project.repository;
 
-import bank.Client;
+import first.project.bank.Client;
 
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Stream;
 
 public class InMemoryRepostiory implements ClientRepository {
 
-    private Set<Client> clients;
+    private final Set<Client> clients;
 
     public InMemoryRepostiory(Set<Client> clients) {
         this.clients = clients;

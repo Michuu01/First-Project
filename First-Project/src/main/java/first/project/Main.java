@@ -1,6 +1,8 @@
-import bank.BankService;
-import bank.Client;
-import repository.InMemoryRepostiory;
+package first.project;
+
+import first.project.bank.Client;
+import first.project.repository.InMemoryRepostiory;
+import first.project.service.BankService;
 
 
 import java.math.BigDecimal;
@@ -30,8 +32,10 @@ public class Main {
                 switch (next) {
                     case "1":
                         addUser(scanner);
+                        continue;
                     case "2":
                         findUser(scanner);
+                        continue;
                     case "3":
                         return;
                 }

@@ -1,5 +1,5 @@
-bank\BankService.class
-Main.class
-repository\InMemoryRepostiory.class
-bank\Client.class
-repository\ClientRepository.class
+first\project\repository\InMemoryRepostiory.class
+first\project\bank\Client.class
+first\project\Main.class
+first\project\service\BankService.class
+first\project\repository\ClientRepository.class

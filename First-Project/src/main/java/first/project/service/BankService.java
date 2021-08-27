@@ -1,6 +1,7 @@
-package bank;
+package first.project.service;
 
-import repository.ClientRepository;
+import first.project.bank.Client;
+import first.project.repository.ClientRepository;
 
 public class BankService {
     ClientRepository clientRepository;
@@ -10,6 +11,11 @@ public class BankService {
     }
 
     public void save(Client client) {
+
+
+        if (!client.getEmail().contains("@")) {
+            throw new IllegalArgumentException("xz@");
+        }
         clientRepository.save(client);
 
     }
@@ -17,5 +23,5 @@ public class BankService {
     public Client FindByEmail(String email) {
         return clientRepository.FindByEmail(email);
     }
-
 }
+
