@@ -30,15 +30,26 @@ public class InMemoryRepositoryTest {
         Assertions.assertEquals(ActualClient, ClientToEquals);
     }
 
-@Test
-public void test2(){
-    Client client = new Client("Michal", "mm.pl", BigDecimal.valueOf(10));
-    clients.add(client);
-Assertions.assertThrows(IllegalArgumentException.class , () -> repository.save(client));
+    @Test
+    public void test2() {
+        Client client = new Client("Michal", "mm.pl", BigDecimal.valueOf(10));
+        clients.add(client);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
 
-        }
+    }
 
+    @Test
+    public void test3() {
+        Client client = new Client("Michal", "mm@pl", BigDecimal.valueOf(10));
+        clients.add(client);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
 
-
+    }
+//    @Test
+//    public void test4(){
+//        Client client = new Client("Michal", null, BigDecimal.valueOf(10));
+//        clients.add(client);
+//        Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
+//    }
 
 }

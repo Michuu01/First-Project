@@ -14,8 +14,14 @@ public class BankService {
 
 
         if (!client.getEmail().contains("@")) {
-            throw new IllegalArgumentException("xz@");
+            throw new IllegalArgumentException("you don't have a '@' ");
         }
+        if (!client.getEmail().contains(".")) {
+            throw new IllegalArgumentException("your email is invalid ");
+        }
+//        if (client.getEmail().equals(null)){
+//            throw new IllegalArgumentException("null problem");
+//        }
         clientRepository.save(client);
 
     }
