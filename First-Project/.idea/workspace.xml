@@ -56,8 +56,8 @@
       <recent name="FirstProject" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryRepositoryTest.test4">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InMemoryRepositoryTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="first.project.Main" />
       <module name="First-Project" />
       <extension name="coverage">
@@ -85,7 +85,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryRepositoryTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InMemoryRepositoryTest.VerifyIfBalanceIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -95,13 +95,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.repository.InMemoryRepositoryTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="METHOD_NAME" value="VerifyIfBalanceIsZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryRepositoryTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InMemoryRepositoryTest.VerifyIfDataIsGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +111,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.repository.InMemoryRepositoryTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="METHOD_NAME" value="VerifyIfDataIsGood" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryRepositoryTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InMemoryRepositoryTest.VerifyIfEmailIsUnique" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +127,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.repository.InMemoryRepositoryTest" />
-      <option name="METHOD_NAME" value="test4" />
+      <option name="METHOD_NAME" value="VerifyIfEmailIsUnique" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryRepositoryTest.test4" />
         <item itemvalue="JUnit.InMemoryRepositoryTest" />
-        <item itemvalue="JUnit.InMemoryRepositoryTest.test2" />
-        <item itemvalue="JUnit.InMemoryRepositoryTest.test" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfDataIsGood" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfEmailIsUnique" />
+        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfBalanceIsZero" />
       </list>
     </recent_temporary>
   </component>

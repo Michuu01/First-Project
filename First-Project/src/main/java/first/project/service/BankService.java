@@ -3,8 +3,13 @@ package first.project.service;
 import first.project.bank.Client;
 import first.project.repository.ClientRepository;
 
+import java.math.BigDecimal;
+import java.util.stream.Stream;
+
 public class BankService {
     ClientRepository clientRepository;
+    String fromEmail;
+    String toEmail;
 
     public BankService(ClientRepository clientRepository) {
         this.clientRepository = clientRepository;
@@ -12,17 +17,22 @@ public class BankService {
 
     public void save(Client client) {
 
-
+        if (client.getEmail() == null) {
+            throw new IllegalArgumentException("null problem");
+        }
         if (!client.getEmail().contains("@")) {
             throw new IllegalArgumentException("you don't have a '@' ");
         }
         if (!client.getEmail().contains(".")) {
             throw new IllegalArgumentException("your email is invalid ");
         }
-//        if (client.getEmail().equals(null)){
-//            throw new IllegalArgumentException("null problem");
-//        }
-        clientRepository.save(client);
+        if (client.getBalance().compareTo(BigDecimal.valueOf(0)) <= 0) {
+            throw new IllegalArgumentException("faulty account balance");
+        }
+
+
+
+            clientRepository.save(client);
 
     }
 
