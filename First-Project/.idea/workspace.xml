@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86c815b-59aa-457b-9f61-b12ddf90ac59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/repository/InMemoryRepostiory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/repository/InMemoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/first/project/repository/InMemoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/repository/InMemoryRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/repository/ClientRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/repository/InMemoryRepostiory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/first/project/repository/InMemoryRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/first/project/repository/InMemoryRepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +45,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/first/project/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
   <component name="ProjectId" id="1xDyFfNpCDF0fV6YDu5SBA96Lat" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -49,14 +61,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="FirstProject" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryRepositoryTest">
+  <component name="RunManager" selected="JUnit.InMemoryRepositoryTest.VerifyIfEmailIsUnique">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="first.project.Main" />
       <module name="First-Project" />
@@ -85,22 +97,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryRepositoryTest.VerifyIfBalanceIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="First-Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="first.project.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="first.project.repository" />
-      <option name="MAIN_CLASS_NAME" value="first.project.repository.InMemoryRepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfBalanceIsZero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="InMemoryRepositoryTest.VerifyIfDataIsGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
@@ -112,6 +108,22 @@
       <option name="PACKAGE_NAME" value="first.project.repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.repository.InMemoryRepositoryTest" />
       <option name="METHOD_NAME" value="VerifyIfDataIsGood" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryRepositoryTest.VerifyIfEmailHasAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="First-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="first.project.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="first.project.repository" />
+      <option name="MAIN_CLASS_NAME" value="first.project.repository.InMemoryRepositoryTest" />
+      <option name="METHOD_NAME" value="VerifyIfEmailHasAt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryRepositoryTest" />
-        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfDataIsGood" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfEmailIsUnique" />
-        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfBalanceIsZero" />
+        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfDataIsGood" />
+        <item itemvalue="JUnit.InMemoryRepositoryTest" />
+        <item itemvalue="JUnit.InMemoryRepositoryTest.VerifyIfEmailHasAt" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -165,5 +177,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/first/project/repository/InMemoryRepositoryTest.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

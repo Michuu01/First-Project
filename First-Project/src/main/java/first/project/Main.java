@@ -1,7 +1,7 @@
 package first.project;
 
 import first.project.bank.Client;
-import first.project.repository.InMemoryRepostiory;
+import first.project.repository.InMemoryRepository;
 import first.project.service.BankService;
 
 
@@ -18,7 +18,7 @@ public class Main {
     }
 
     private void run() {
-        InMemoryRepostiory repository = new InMemoryRepostiory(new HashSet<>());
+        InMemoryRepository repository = new InMemoryRepository(new HashSet<>());
         bankservice = new BankService(repository);
 
 

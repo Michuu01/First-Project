@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
-import java.util.Objects;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class InMemoryRepositoryTest {
     private BankService repository;
@@ -17,27 +18,28 @@ public class InMemoryRepositoryTest {
     @BeforeEach
     public void setup() {
         clients = new HashSet<>();
-        repository = new BankService(new InMemoryRepostiory(clients));
+        repository = new BankService(new InMemoryRepository(clients));
 
     }
 
     @Test
     public void VerifyIfDataIsGood() {
         Client client = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
+        Client ClientToEquals = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
         repository.save(client);
-        Client ActualClient = clients.stream().findFirst().get();
-        final Client ClientToEquals = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
-        Assertions.assertEquals(ActualClient, ClientToEquals);
+        final Client ActualClient = clients.stream().findFirst().get();
+        assertEquals(ActualClient, ClientToEquals);
     }
-//    @Test
-//    public void VerifyIfEmailIsUnique(){
-//        final Client NewClient = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
-//        repository.save(NewClient);
-//        Client ActualClient = clients.stream().findFirst().get();
-//        Client ExpectedClient = new Client ("Josh", "m@m.pl", BigDecimal.valueOf(130.5));
-//       if (ActualClient.getEmail().equals(ExpectedClient.getEmail())){
-//           Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(ExpectedClient));
-//       }
+    @Test
+    public void VerifyIfEmailIsUnique() {
+        final Client NewClient = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
+        repository.save(NewClient);
+        Client ActualClient = clients.stream().findFirst().get();
+        Client ExpectedClient = new Client("Josh", "m@m.pl", BigDecimal.valueOf(130.5));
+        if (ActualClient.getEmail().equals(ExpectedClient.getEmail())) {
+            Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(ExpectedClient));
+        }
+    }
 
 
     @Test
@@ -55,20 +57,23 @@ public class InMemoryRepositoryTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
 
     }
+
     @Test
-    public void VerifyIfEmailIsNull(){
+    public void VerifyIfEmailIsNull() {
         final Client client = new Client("Michal", null, BigDecimal.valueOf(10));
         clients.add(client);
         Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
     }
+
     @Test
-    public void VerifyIfBalanceIsMinus(){
-        final Client client = new Client("Michal","m@m.pl",BigDecimal.valueOf(-1));
+    public void VerifyIfBalanceIsMinus() {
+        final Client client = new Client("Michal", "m@m.pl", BigDecimal.valueOf(-1));
         Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
     }
+
     @Test
-    public void VerifyIfBalanceIsZero(){
-        final Client client = new Client("Michal","m@m.pl",BigDecimal.valueOf(0));
+    public void VerifyIfBalanceIsZero() {
+        final Client client = new Client("Michal", "m@m.pl", BigDecimal.valueOf(0));
         Assertions.assertThrows(IllegalArgumentException.class, () -> repository.save(client));
     }
 
