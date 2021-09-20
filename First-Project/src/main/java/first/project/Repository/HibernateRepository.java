@@ -3,6 +3,7 @@ package first.project.Repository;
 import first.project.ClientRepository;
 import first.project.Hibernate.HibernateUtil;
 import first.project.bank.Client;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import java.math.BigDecimal;
@@ -19,8 +20,16 @@ public class HibernateRepository implements ClientRepository {
 
     @Override
     public Client FindByEmail(String email) {
-        HibernateUtil.getStartSession().close();
-        return FindByEmail(email);
+        final Session session = HibernateUtil.getStartSession().openSession();
+        session.beginTransaction();
+        final Query<Client> query = session.createQuery("from Client where email=:email", Client.class);
+        query.setParameter("email", email);
+        Client client = query.uniqueResult();
+        session.close();
+        if (client == null) {
+            throw new RuntimeException("Invalid Email");
+        }
+            return client;
 
     }
 

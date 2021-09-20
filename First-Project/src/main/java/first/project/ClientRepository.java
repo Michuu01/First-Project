@@ -1,7 +1,6 @@
 package first.project;
 
 import first.project.bank.Client;
-
 import java.math.BigDecimal;
 
 public interface ClientRepository {

@@ -15,7 +15,13 @@ public class BankService {
     public void save(Client client) {
 
         if (client.getEmail() == null) {
-            throw new IllegalArgumentException("null problem");
+            throw new IllegalArgumentException("Null problem");
+        }
+        if (client.getName() == null){
+            throw new IllegalArgumentException("Null problem");
+        }
+        if (client.getBalance()==null){
+            throw new IllegalArgumentException("Null problem");
         }
         if (!client.getEmail().contains("@")) {
             throw new IllegalArgumentException("you don't have a '@' ");
@@ -28,18 +34,15 @@ public class BankService {
         }
 
         clientRepository.save(client);
-        }
+    }
 
     public Client FindByEmail(String email) {
         return clientRepository.FindByEmail(email);
     }
 
-
-
     public void transfer(String fromEmail, String toEmail, BigDecimal amount) {
         Client fromClient = FindByEmail(fromEmail);
         Client toClient = FindByEmail(toEmail);
-
 
 
     }

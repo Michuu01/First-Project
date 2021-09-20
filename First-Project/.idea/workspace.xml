@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86c815b-59aa-457b-9f61-b12ddf90ac59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/bank/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/bank/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/repository/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/InMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Repository/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/InMemoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/first/project/repository/InMemoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/First-Project-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/First-Project-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/first/project/Service/BankServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Service/BankServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/first/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/first/project/bank/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/bank/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/first/project/repository/ClientRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/first/project/repository/InMemoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/repository/InMemoryRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/first/project/repository/InMemoryRepositoryTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +67,7 @@
       <recent name="FirstProject" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.RepositoryTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="first.project.Main" />
       <module name="First-Project" />
@@ -92,22 +81,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="first.project.Service.*" />
+          <option name="PATTERN" value="first.project.Repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="first.project.Service" />
-      <option name="MAIN_CLASS_NAME" value="first.project.Service.BankServiceTest" />
+      <option name="PACKAGE_NAME" value="first.project.Repository" />
+      <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfBalanceIsMinus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositoryTest.VerifyIfBalanceIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -117,13 +106,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfBalanceIsMinus" />
+      <option name="METHOD_NAME" value="VerifyIfBalanceIsNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfEmailHasAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositoryTest.VerifyIfDataIsGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -133,13 +122,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfEmailHasAt" />
+      <option name="METHOD_NAME" value="VerifyIfDataIsGood" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfEmailHasDot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositoryTest.VerifyIfNameIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -149,7 +138,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfEmailHasDot" />
+      <option name="METHOD_NAME" value="VerifyIfNameIsNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RepositoryTest" />
+        <item itemvalue="JUnit.RepositoryTest.VerifyIfBalanceIsNull" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfBalanceIsMinus" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfEmailHasAt" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfEmailHasDot" />
-        <item itemvalue="JUnit.BankServiceTest" />
+        <item itemvalue="JUnit.RepositoryTest.VerifyIfNameIsNull" />
+        <item itemvalue="JUnit.RepositoryTest.VerifyIfDataIsGood" />
       </list>
     </recent_temporary>
   </component>

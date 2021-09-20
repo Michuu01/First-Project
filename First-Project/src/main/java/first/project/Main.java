@@ -1,13 +1,9 @@
 package first.project;
 
 import first.project.Repository.HibernateRepository;
-import first.project.Repository.InMemoryRepository;
 import first.project.bank.Client;
 import first.project.service.BankService;
-
-
 import java.math.BigDecimal;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
