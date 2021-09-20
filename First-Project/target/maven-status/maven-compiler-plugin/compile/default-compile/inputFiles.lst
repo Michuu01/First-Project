@@ -1,5 +1,7 @@
 C:\Micha許gitopen\First-Project\src\main\java\first\project\bank\Client.java
-C:\Micha許gitopen\First-Project\src\main\java\first\project\repository\ClientRepository.java
+C:\Micha許gitopen\First-Project\src\main\java\first\project\Repository\HibernateRepository.java
 C:\Micha許gitopen\First-Project\src\main\java\first\project\service\BankService.java
+C:\Micha許gitopen\First-Project\src\main\java\first\project\Hibernate\HibernateUtil.java
+C:\Micha許gitopen\First-Project\src\main\java\first\project\Repository\InMemoryRepository.java
+C:\Micha許gitopen\First-Project\src\main\java\first\project\ClientRepository.java
 C:\Micha許gitopen\First-Project\src\main\java\first\project\Main.java
-C:\Micha許gitopen\First-Project\src\main\java\first\project\repository\InMemoryRepostiory.java

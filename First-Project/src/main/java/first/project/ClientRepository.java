@@ -1,4 +1,4 @@
-package first.project.repository;
+package first.project;
 
 import first.project.bank.Client;
 

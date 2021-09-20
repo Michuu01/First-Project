@@ -1,11 +1,22 @@
 package first.project.bank;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@Entity
+@Table(name = "USERS")
 public class Client {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "USER_ID")
+    private Long id;
+    @Column(name = "FIRST_NAME")
     private String name;
+    @Column(name = "EMAIL")
     private String email;
+    @Transient
     private BigDecimal balance;
 
     public Client(String name, String email, BigDecimal balance) {
@@ -14,6 +25,10 @@ public class Client {
         this.balance = balance;
     }
 
+    public Client() {
+    }
+
+
     @Override
     public String toString() {
         return "Client{" +
@@ -21,6 +36,13 @@ public class Client {
                 ", email='" + email + '\'' +
                 ", balance=" + balance +
                 '}';
+    }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

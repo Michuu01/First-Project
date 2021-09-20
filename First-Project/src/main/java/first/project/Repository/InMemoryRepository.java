@@ -1,5 +1,6 @@
-package first.project.repository;
+package first.project.Repository;
 
+import first.project.ClientRepository;
 import first.project.bank.Client;
 
 import java.math.BigDecimal;

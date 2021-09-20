@@ -1,11 +1,9 @@
 package first.project.service;
 
 import first.project.bank.Client;
-import first.project.repository.ClientRepository;
-import first.project.repository.InMemoryRepository;
+import first.project.ClientRepository;
 
 import java.math.BigDecimal;
-import java.util.stream.Stream;
 
 public class BankService {
     ClientRepository clientRepository;
@@ -29,22 +27,21 @@ public class BankService {
             throw new IllegalArgumentException("faulty account balance");
         }
 
-
-
+        clientRepository.save(client);
         }
-
-
 
     public Client FindByEmail(String email) {
         return clientRepository.FindByEmail(email);
     }
 
+
+
     public void transfer(String fromEmail, String toEmail, BigDecimal amount) {
         Client fromClient = FindByEmail(fromEmail);
         Client toClient = FindByEmail(toEmail);
-        {
 
-        }
+
+
     }
 
 

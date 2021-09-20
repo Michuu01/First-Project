@@ -1,7 +1,8 @@
 package first.project;
 
+import first.project.Repository.HibernateRepository;
+import first.project.Repository.InMemoryRepository;
 import first.project.bank.Client;
-import first.project.repository.InMemoryRepository;
 import first.project.service.BankService;
 
 
@@ -18,7 +19,7 @@ public class Main {
     }
 
     private void run() {
-        InMemoryRepository repository = new InMemoryRepository(new HashSet<>());
+      HibernateRepository repository = new HibernateRepository();
         bankservice = new BankService(repository);
 
 
@@ -52,7 +53,6 @@ public class Main {
         String balance = scanner.next();
         bankservice.save(new Client(name, email, new BigDecimal(balance)));
     }
-
     private void findUser(Scanner scanner) {
         System.out.println("Enter email");
         String email = scanner.next();

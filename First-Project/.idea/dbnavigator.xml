@@ -33,7 +33,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="1ba79734-cbdd-499a-9844-e141758b80ed">
-      <console name="Client" type="STANDARD" schema="public" session="Main"><![CDATA[create table users(
+      <console name="Client" type="STANDARD" schema="public" session="Main"><![CDATA[create table  users(
 user_id serial primary key,
 first_name varchar(50) not null,
 email varchar(50) unique not null  

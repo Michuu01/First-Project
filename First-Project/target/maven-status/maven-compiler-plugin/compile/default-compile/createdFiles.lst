@@ -1,5 +1,7 @@
-first\project\repository\InMemoryRepostiory.class
 first\project\bank\Client.class
+first\project\Repository\HibernateRepository.class
+first\project\Repository\InMemoryRepository.class
+first\project\ClientRepository.class
 first\project\Main.class
 first\project\service\BankService.class
-first\project\repository\ClientRepository.class
+first\project\Hibernate\HibernateUtil.class
