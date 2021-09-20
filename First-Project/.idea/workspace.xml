@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86c815b-59aa-457b-9f61-b12ddf90ac59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Hibernate/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Hibernate/HibernateUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Repository/InMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/InMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/bank/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/bank/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/first/project/Service/BankServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Service/BankServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/Hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/Hibernate/HibernateUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/first/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/repository/HibernateRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/repository/HibernateRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/first/project/Repository/RepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/first/project/Repository/RepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfNameIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositoryTest.VerifyIfEmailIsSaveToLowercase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +140,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="first.project.Repository" />
       <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfNameIsNull" />
+      <option name="METHOD_NAME" value="VerifyIfEmailIsSaveToLowercase" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,10 +149,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RepositoryTest" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfBalanceIsNull" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfNameIsNull" />
+        <item itemvalue="JUnit.RepositoryTest.VerifyIfEmailIsSaveToLowercase" />
         <item itemvalue="JUnit.RepositoryTest.VerifyIfDataIsGood" />
+        <item itemvalue="JUnit.RepositoryTest.VerifyIfBalanceIsNull" />
       </list>
     </recent_temporary>
   </component>

@@ -25,12 +25,14 @@ public class RepositoryTest {
 
     @Test
     public void VerifyIfDataIsGood() {
-        Client client = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
+        String email = "m@m.pl";
+        Client client = new Client("Michal", email, BigDecimal.valueOf(10));
         repository.save(client);
         Client ClientToEquals = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
-        when(repository.FindByEmail(String.valueOf(client))).thenReturn(ClientToEquals);
+        when(repository.FindByEmail(email)).thenReturn(ClientToEquals);
         verify(repository).save(ClientToEquals);
     }
+
     @Test
     public void VerifyIfEmailHasAt() {
         String email = "m.m";
@@ -51,12 +53,14 @@ public class RepositoryTest {
         final Client client = new Client("Michal", email, BigDecimal.valueOf(10));
         Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
     }
+
     @Test
     public void VerifyIfNameIsNull() {
         String name = null;
         final Client client = new Client(name, "m@m.pl", BigDecimal.valueOf(10));
         Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
     }
+
     @Test
     public void VerifyIfBalanceIsNull() {
         final Client client = new Client("Michal", "m@m.pl", null);
@@ -74,5 +78,18 @@ public class RepositoryTest {
         final Client client = new Client("Michal", "m@m.pl", BigDecimal.valueOf(0));
         Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
     }
+
+    @Test
+    public void VerifyIfEmailIsSaveToLowercase() {
+        String email = "M@m.Pl";
+        Client client = new Client("Michal", email, BigDecimal.valueOf(10));
+        when(repository.FindByEmail(email)).thenReturn(client);
+        service.save(client);
+        Client EClient = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
+        Assertions.assertEquals(client, EClient);
+
+
+    }
+
 
 }

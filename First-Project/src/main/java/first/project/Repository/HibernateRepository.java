@@ -27,7 +27,7 @@ public class HibernateRepository implements ClientRepository {
         Client client = query.uniqueResult();
         session.close();
         if (client == null) {
-            throw new RuntimeException("Invalid Email");
+            System.out.println("invalid email");
         }
             return client;
 

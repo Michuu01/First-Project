@@ -36,8 +36,11 @@
       <console name="Client" type="STANDARD" schema="public" session="Main"><![CDATA[create table  users(
 user_id serial primary key,
 first_name varchar(50) not null,
-email varchar(50) unique not null  
+email varchar(50) unique not null,
+balance varchar(50) not null
 )
+
+
 select * from users]]></console>
     </connection>
   </component>

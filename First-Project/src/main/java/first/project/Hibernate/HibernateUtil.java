@@ -22,7 +22,5 @@ public class HibernateUtil {
     public static SessionFactory getStartSession() {
         return sessionFactory;
     }
-    public static void Shutdown(){
-        sessionFactory.close();
-    }
+
 }

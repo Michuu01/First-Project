@@ -4,6 +4,7 @@ import first.project.bank.Client;
 import first.project.ClientRepository;
 
 import java.math.BigDecimal;
+import java.util.Locale;
 
 public class BankService {
     ClientRepository clientRepository;
@@ -11,18 +12,21 @@ public class BankService {
     public BankService(ClientRepository clientRepository) {
         this.clientRepository = clientRepository;
     }
-
     public void save(Client client) {
+
+
+
 
         if (client.getEmail() == null) {
             throw new IllegalArgumentException("Null problem");
         }
-        if (client.getName() == null){
+        if (client.getName() == null) {
             throw new IllegalArgumentException("Null problem");
         }
-        if (client.getBalance()==null){
+        if (client.getBalance() == null) {
             throw new IllegalArgumentException("Null problem");
         }
+
         if (!client.getEmail().contains("@")) {
             throw new IllegalArgumentException("you don't have a '@' ");
         }
@@ -35,6 +39,7 @@ public class BankService {
 
         clientRepository.save(client);
     }
+
 
     public Client FindByEmail(String email) {
         return clientRepository.FindByEmail(email);

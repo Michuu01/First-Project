@@ -16,7 +16,7 @@ public class Client {
     private String name;
     @Column(name = "EMAIL")
     private String email;
-    @Transient
+    @Column(name = "balance")
     private BigDecimal balance;
 
     public Client(String name, String email, BigDecimal balance) {
