@@ -24,7 +24,7 @@ public class HibernateRepository implements ClientRepository {
         session.beginTransaction();
         final Query<Client> query = session.createQuery("from Client where email=:email", Client.class);
         query.setParameter("email", email);
-        Client client = query.setMaxResults(1).uniqueResult();
+        Client client = query.uniqueResult();
         session.close();
         if (client == null) {
             System.out.println("invalid email");
@@ -44,14 +44,13 @@ public class HibernateRepository implements ClientRepository {
 
         BigDecimal subtract = balance.subtract(amount);
         BigDecimal add = balance1.add(amount);
-        System.out.println(subtract);
-        System.out.println(add);
+        System.out.println("account balance = "+subtract);
+
         final org.hibernate.query.Query query = session.createQuery("update Client set balance=:amount "+ "where email=:fromEmail");
         final org.hibernate.query.Query query2 = session.createQuery("update Client set balance=:amount"+" where email =:toEmail");
         query.setParameter("amount", subtract);
         query.setParameter("fromEmail", fromEmail);
         query2.setParameter("toEmail", toEmail);
-
         query2.setParameter("amount", add);
         query.executeUpdate();
         query2.executeUpdate();
@@ -60,16 +59,5 @@ public class HibernateRepository implements ClientRepository {
 
 
     }
-//       final Session session = HibernateUtil.getStartSession().openSession();
-//        session.beginTransaction();
-//        final Query<Client> query = session.createQuery("delete Client where email =:fromEmail", Client.class);
-//        final Query<Client> query2 = session.createQuery("update from Client where email =:toEmail", Client.class);
-//        query.setParameter("fromEmail", fromEmail);
-//        query2.setParameter("toEmail", toEmail);
-//        query.uniqueResult();
-//        session.getTransaction().commit();
-//        session.close();
-//
-//    }
 
 }
