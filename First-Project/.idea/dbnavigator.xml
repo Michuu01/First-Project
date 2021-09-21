@@ -26,8 +26,8 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="1ba79734-cbdd-499a-9844-e141758b80ed">
-        <schema name="pg_catalog" object-types="table, view, function" />
-        <schema name="public" object-types="table, view, function" />
+        <schema name="pg_catalog" object-types="table, view, function, constraint" />
+        <schema name="public" object-types="table, view, function, constraint, column" />
       </connection>
     </loaded-nodes>
   </component>
@@ -36,12 +36,26 @@
       <console name="Client" type="STANDARD" schema="public" session="Main"><![CDATA[create table  users(
 user_id serial primary key,
 first_name varchar(50) not null,
-email varchar(50) unique not null,
-balance varchar(50) not null
+email varchar(50) not null,
+balance varchar (50)  not null
+)
+
+create table accounts(
+account_id serial primary key,
+balance numeric not null,
+currency varchar(3) not null,
+user_id serial not null,
+constraint accounts_users_fk foreign key(user_id) 
+references users(user_id)
 )
 
 
-select * from users]]></console>
+
+drop table users
+
+
+select * from users
+select * from accounts]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -72,7 +86,9 @@ select * from users]]></console>
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="POSTGRES" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
@@ -95,7 +111,7 @@ select * from users]]></console>
           <deprecated-pwd value="cXdlcnR5" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />

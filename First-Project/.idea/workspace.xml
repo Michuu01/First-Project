@@ -7,16 +7,16 @@
     <list default="true" id="e86c815b-59aa-457b-9f61-b12ddf90ac59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Hibernate/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Hibernate/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/bank/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/bank/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Repository/RepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/first/project/Hibernate/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/Hibernate/HibernateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/first/project/Service/BankServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/first/project/Service/BankServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/first/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/first/project/repository/HibernateRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/repository/HibernateRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/bank/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/bank/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/first/project/Repository/RepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/first/project/Repository/RepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/first/project/Service/BankServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/first/project/Service/BankServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/first/project/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="2" />
   </component>
@@ -64,12 +71,15 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="first.project.Service" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="first.project.Repository" />
       <recent name="FirstProject" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RepositoryTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="first.project.Main" />
       <module name="First-Project" />
@@ -83,64 +93,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="first.project.Repository.*" />
+          <option name="PATTERN" value="first.project.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="first.project.Repository" />
-      <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
+      <option name="PACKAGE_NAME" value="first.project.Service" />
+      <option name="MAIN_CLASS_NAME" value="first.project.Service.BankServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfBalanceIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankServiceTest.VerifyIfCorrectTransferMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="first.project.Repository.*" />
+          <option name="PATTERN" value="first.project.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="first.project.Repository" />
-      <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfBalanceIsNull" />
+      <option name="PACKAGE_NAME" value="first.project.Service" />
+      <option name="MAIN_CLASS_NAME" value="first.project.Service.BankServiceTest" />
+      <option name="METHOD_NAME" value="VerifyIfCorrectTransferMoney" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfDataIsGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankServiceTest.VerifyIfYuEnoughFounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="first.project.Repository.*" />
+          <option name="PATTERN" value="first.project.Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="first.project.Repository" />
-      <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfDataIsGood" />
+      <option name="PACKAGE_NAME" value="first.project.Service" />
+      <option name="MAIN_CLASS_NAME" value="first.project.Service.BankServiceTest" />
+      <option name="METHOD_NAME" value="VerifyIfYuEnoughFounds" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.VerifyIfEmailIsSaveToLowercase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankServiceTest.money" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="First-Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="first.project.Repository.*" />
+          <option name="PATTERN" value="first.project.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="first.project.Repository" />
-      <option name="MAIN_CLASS_NAME" value="first.project.Repository.RepositoryTest" />
-      <option name="METHOD_NAME" value="VerifyIfEmailIsSaveToLowercase" />
+      <option name="PACKAGE_NAME" value="first.project.Service" />
+      <option name="MAIN_CLASS_NAME" value="first.project.Service.BankServiceTest" />
+      <option name="METHOD_NAME" value="money" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RepositoryTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfEmailIsSaveToLowercase" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfDataIsGood" />
-        <item itemvalue="JUnit.RepositoryTest.VerifyIfBalanceIsNull" />
+        <item itemvalue="JUnit.BankServiceTest" />
+        <item itemvalue="JUnit.BankServiceTest.VerifyIfYuEnoughFounds" />
+        <item itemvalue="JUnit.BankServiceTest.VerifyIfCorrectTransferMoney" />
+        <item itemvalue="JUnit.BankServiceTest.money" />
       </list>
     </recent_temporary>
   </component>
