@@ -24,6 +24,12 @@ public class RepositoryTest {
     }
 
     @Test
+    public void VerifyIfEmailIsNull() {
+        String email = null;
+        final Client client = new Client("Michal", email, BigDecimal.valueOf(10));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
+    }
+    @Test
     public void VerifyIfDataIsGood() {
         String email = "m@m.pl";
         Client client = new Client("Michal", email, BigDecimal.valueOf(10));
@@ -47,12 +53,7 @@ public class RepositoryTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
     }
 
-    @Test
-    public void VerifyIfEmailIsNull() {
-        String email = null;
-        final Client client = new Client("Michal", email, BigDecimal.valueOf(10));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
-    }
+
 
     @Test
     public void VerifyIfNameIsNull() {
@@ -81,12 +82,9 @@ public class RepositoryTest {
 
     @Test
     public void VerifyIfEmailIsSaveToLowercase() {
-        String email = "M@m.Pl";
+        String email = "M@M.Pl";
         Client client = new Client("Michal", email, BigDecimal.valueOf(10));
-        when(repository.FindByEmail(email)).thenReturn(client);
-        service.save(client);
-        Client EClient = new Client("Michal", "m@m.pl", BigDecimal.valueOf(10));
-        Assertions.assertEquals(client, EClient);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
 
 
     }

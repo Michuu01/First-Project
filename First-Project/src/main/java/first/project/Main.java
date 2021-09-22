@@ -5,6 +5,7 @@ import first.project.bank.Client;
 import first.project.service.BankService;
 
 import java.math.BigDecimal;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -53,7 +54,7 @@ public class Main {
         String email = scanner.next();
         System.out.println("Enter balance");
         String balance = scanner.next();
-        bankservice.save(new Client(name, email, new BigDecimal(balance)));
+        bankservice.save(new Client(name, email.toLowerCase(Locale.ROOT), new BigDecimal(balance)));
     }
 
     private void findUser(Scanner scanner) {

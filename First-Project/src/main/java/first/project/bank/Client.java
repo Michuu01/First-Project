@@ -21,7 +21,7 @@ public class Client {
 
     public Client(String name, String email, BigDecimal balance) {
         this.name = name;
-        this.email = email.toLowerCase();
+        this.email = email;
         this.balance = balance;
     }
 

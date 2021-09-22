@@ -22,9 +22,9 @@ public class HibernateRepository implements ClientRepository {
     public Client FindByEmail(String email) {
         final Session session = HibernateUtil.getStartSession().openSession();
         session.beginTransaction();
-        final Query<Client> query = session.createQuery("from Client where email=:email", Client.class);
+        final org.hibernate.query.Query query = session.createQuery("from Client where email=:email", Client.class);
         query.setParameter("email", email);
-        Client client = query.uniqueResult();
+        Client client = (Client) query.uniqueResult();
         session.close();
         if (client == null) {
             System.out.println("invalid email");
@@ -37,13 +37,12 @@ public class HibernateRepository implements ClientRepository {
     public void transfer(String fromEmail, String toEmail, BigDecimal amount) {
         final Session session = HibernateUtil.getStartSession().openSession();
         session.beginTransaction();
-        Client client = FindByEmail(fromEmail);
-        Client client2 = FindByEmail(toEmail);
-        BigDecimal balance1 = client2.getBalance();
-        BigDecimal balance = client.getBalance();
-
-        BigDecimal subtract = balance.subtract(amount);
-        BigDecimal add = balance1.add(amount);
+        Client clientFrom = FindByEmail(fromEmail);
+        Client clientTo = FindByEmail(toEmail);
+        BigDecimal balanceFrom = clientFrom.getBalance();
+        BigDecimal balanceTo = clientTo.getBalance();
+        BigDecimal subtract = balanceFrom.subtract(amount);
+        BigDecimal add = balanceTo.add(amount);
         System.out.println("account balance = "+subtract);
 
         final org.hibernate.query.Query query = session.createQuery("update Client set balance=:amount "+ "where email=:fromEmail");

@@ -27,33 +27,51 @@ public class BankServiceTest {
 
     @Test
     public void VerifyIfCorrectTransferMoney() {
-        String fromClient = "a@a.";
-        String toClient = "b@b.";
+        String fromEmail = "a@a.";
+        String toEmail = "b@b.";
         Client clientFrom = new Client("Michal", "a@a.", BigDecimal.valueOf(1000));
         Client clientTo = new Client("Josh", "b@a.", BigDecimal.valueOf(500));
+        when(repository.FindByEmail(fromEmail)).thenReturn(clientFrom);
+        when(repository.FindByEmail(toEmail)).thenReturn(clientTo);
         final BigDecimal amount = BigDecimal.valueOf(500);
-        when(repository.FindByEmail(fromClient)).thenReturn(clientFrom);
-        when(repository.FindByEmail(toClient)).thenReturn(clientTo);
-        service.transfer(fromClient, toClient, amount);
+        service.transfer(fromEmail, toEmail, amount);
         final Client ExpectedClientFrom = new Client("Michal", "a@a.", BigDecimal.valueOf(500));
         final Client ExpectedClientTo = new Client("Josh", "b@a.", BigDecimal.valueOf(1000));
-        verify(repository).save(ExpectedClientFrom);
-        verify(repository).save(ExpectedClientTo);
+        final Client In = repository.FindByEmail(fromEmail);
+        final Client In2 = repository.FindByEmail(toEmail);
+        Assertions.assertEquals(ExpectedClientFrom, In);
+        Assertions.assertEquals(ExpectedClientTo, In2);
+
     }
 
     @Test
     public void VerifyIfYouEnoughFunds() {
-        String fromClient = "a@a.";
-        String toClient = "b@b.";
+        String fromEmail = "a@a.";
+        String toEmail = "b@b.";
         Client clientFrom = new Client("Michal", "a@a.", BigDecimal.valueOf(1000));
         Client clientTo = new Client("Josh", "b@a.", BigDecimal.valueOf(500));
         final BigDecimal amount = BigDecimal.valueOf(1001);
-        when(repository.FindByEmail(fromClient)).thenReturn(clientFrom);
-        when(repository.FindByEmail(toClient)).thenReturn(clientTo);
+        when(repository.FindByEmail(fromEmail)).thenReturn(clientFrom);
+        when(repository.FindByEmail(toEmail)).thenReturn(clientTo);
         Assertions.assertThrows(NoSufficientFoundsException.class,
-                () -> service.transfer(fromClient, toClient, amount));
-
-
+                () -> service.transfer(fromEmail, toEmail, amount));
     }
+
+    @Test
+    public void VerifyIfYouSendToYourself() {
+        String fromEmail = "a@a.";
+        Assertions.assertThrows
+                (IllegalArgumentException.class,
+                        () -> service.transfer(fromEmail, fromEmail, BigDecimal.valueOf(10)));
+    }
+
+    @Test
+    public void VerifyIfAmountIsMinus() {
+        String fromEmail = "a@a.";
+        String toEmail = "b@b.";
+        Assertions.assertThrows(IllegalArgumentException.class, () -> service.transfer
+                (fromEmail, toEmail, BigDecimal.valueOf(-1)));
+    }
+
 
 }

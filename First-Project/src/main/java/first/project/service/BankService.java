@@ -25,6 +25,13 @@ public class BankService {
         if (client.getBalance() == null) {
             throw new IllegalArgumentException("Null problem");
         }
+
+
+
+        for (int i = 0; i < client.getEmail().length(); i++)
+            if (Character.isUpperCase(client.getEmail().charAt(i))) {
+                throw new IllegalArgumentException("Email must be in lowercase");
+            }
         if (!client.getEmail().contains("@")) {
             throw new IllegalArgumentException("you don't have a '@' ");
         }
@@ -34,16 +41,29 @@ public class BankService {
         if (client.getBalance().compareTo(BigDecimal.valueOf(0)) <= 0) {
             throw new IllegalArgumentException("faulty account balance");
         }
-
+        Client client1 = FindByEmail(client.getEmail());
+        String email = client1.getEmail();
+        String newEmail = client.getEmail();
+        if (email.equals(newEmail)) {
+            throw new IllegalArgumentException("email already in use!");
+        }
         clientRepository.save(client);
     }
 
 
     public Client FindByEmail(String email) {
+
+
         return clientRepository.FindByEmail(email.toLowerCase());
     }
 
     public void transfer(String fromEmail, String toEmail, BigDecimal amount) {
+        if (fromEmail.equals(toEmail)) {
+            throw new IllegalArgumentException("email from and email to is equals!");
+        }
+        if (amount.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Wrong value");
+        }
         Client fromClient = FindByEmail(fromEmail);
         Client toClient = FindByEmail(toEmail);
 
@@ -56,7 +76,6 @@ public class BankService {
         }
 
         clientRepository.transfer(fromEmail, toEmail, amount);
-
 
 
     }
