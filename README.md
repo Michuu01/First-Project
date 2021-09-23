@@ -1,11 +1,17 @@
 # Project
 *This is project primitive BankService
 
+
 Method save :white_check_mark:
+
 Mthod find :white_check_mark:
+
 Method transfer :white_check_mark:
+
 Method delete :white_check_mark: 
+
 Method exit :white_check_mark:
+
 Method edit
 
 
