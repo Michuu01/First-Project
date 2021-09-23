@@ -4,7 +4,6 @@ import first.project.bank.Client;
 import first.project.ClientRepository;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 
 public class BankService {
@@ -44,7 +43,6 @@ public class BankService {
         clientRepository.save(client);
     }
 
-
     public Client FindByEmail(String email) {
 
 
@@ -68,8 +66,17 @@ public class BankService {
         } else {
             throw new NoSufficientFoundsException();
         }
-
         clientRepository.transfer(fromEmail, toEmail, amount);
+    }
+
+    public void delete(String email) {
+
+        if (FindByEmail(email) == null){
+            throw new IllegalArgumentException("invalid email");
+
+        }
+
+            clientRepository.delete(email);
 
 
     }

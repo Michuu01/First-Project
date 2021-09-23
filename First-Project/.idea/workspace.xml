@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e86c815b-59aa-457b-9f61-b12ddf90ac59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/Repository/HibernateRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/first/project/service/BankService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/first/project/service/BankService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,8 +153,8 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BankServiceTest" />
-        <item itemvalue="JUnit.BankServiceTest.VerifyIfAmountIsMinus" />
         <item itemvalue="JUnit.RepositoryTest" />
+        <item itemvalue="JUnit.BankServiceTest.VerifyIfAmountIsMinus" />
         <item itemvalue="JUnit.BankServiceTest.VerifyIfEmailIsValid" />
       </list>
     </recent_temporary>

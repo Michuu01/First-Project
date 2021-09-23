@@ -26,7 +26,8 @@ public class Main {
                 System.out.println("'1' = add user");
                 System.out.println("'2' = find user");
                 System.out.println("'3' = transfer Money");
-                System.out.println("'4' = Exit");
+                System.out.println("'4' = delete usr");
+                System.out.println("'5' = Exit");
                 String next = scanner.next();
 
                 switch (next) {
@@ -39,14 +40,20 @@ public class Main {
                     case "3":
                         transferMoney(scanner);
                         continue;
-//                        case "4";
-//                        delete(scanner);
-//                        continue;
                     case "4":
+                        delete(scanner);
+                        continue;
+                    case "5":
                         return;
                 }
             }
         }
+    }
+
+    private void delete(Scanner scanner) {
+        System.out.println("enter email");
+        String email = scanner.next();
+        bankservice.delete(email);
     }
 
 
