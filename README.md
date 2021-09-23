@@ -44,7 +44,7 @@ add another account :x:
 
 ## In method find:
 
-find tests :white_check_mark
+find tests :white_check_mark:
 
 find by e-mail :white_check_mark:
 
