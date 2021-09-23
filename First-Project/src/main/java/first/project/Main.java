@@ -39,6 +39,9 @@ public class Main {
                     case "3":
                         transferMoney(scanner);
                         continue;
+//                        case "4";
+//                        delete(scanner);
+//                        continue;
                     case "4":
                         return;
                 }

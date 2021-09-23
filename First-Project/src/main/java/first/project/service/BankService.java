@@ -4,6 +4,7 @@ import first.project.bank.Client;
 import first.project.ClientRepository;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 
 public class BankService {
@@ -26,8 +27,6 @@ public class BankService {
             throw new IllegalArgumentException("Null problem");
         }
 
-
-
         for (int i = 0; i < client.getEmail().length(); i++)
             if (Character.isUpperCase(client.getEmail().charAt(i))) {
                 throw new IllegalArgumentException("Email must be in lowercase");
@@ -41,12 +40,7 @@ public class BankService {
         if (client.getBalance().compareTo(BigDecimal.valueOf(0)) <= 0) {
             throw new IllegalArgumentException("faulty account balance");
         }
-        Client client1 = FindByEmail(client.getEmail());
-        String email = client1.getEmail();
-        String newEmail = client.getEmail();
-        if (email.equals(newEmail)) {
-            throw new IllegalArgumentException("email already in use!");
-        }
+
         clientRepository.save(client);
     }
 
