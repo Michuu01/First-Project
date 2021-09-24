@@ -26,8 +26,7 @@ public class RepositoryTest {
     @Test
     public void VerifyIfEmailIsNull() {
         String email = null;
-        final Client client = new Client("Michal", email, BigDecimal.valueOf(10));
-        Assertions.assertThrows(IllegalArgumentException.class, () -> service.save(client));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> service.FindByEmail(email));
     }
     @Test
     public void VerifyIfDataIsGood() {

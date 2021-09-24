@@ -44,7 +44,9 @@ public class BankService {
     }
 
     public Client FindByEmail(String email) {
-
+        if (email == null) {
+            throw new IllegalArgumentException("Invalid email!");
+        }
 
         return clientRepository.FindByEmail(email.toLowerCase());
     }
@@ -71,12 +73,12 @@ public class BankService {
 
     public void delete(String email) {
 
-        if (FindByEmail(email) == null){
+        if (FindByEmail(email) == null) {
             throw new IllegalArgumentException("invalid email");
 
         }
 
-            clientRepository.delete(email);
+        clientRepository.delete(email);
 
 
     }

@@ -27,8 +27,11 @@ public class HibernateRepository implements ClientRepository {
         final Query<Client> query = session.createQuery("from Client where email=:email", Client.class);
         query.setParameter("email", email);
         Client client = query.uniqueResult();
-        session.close();
 
+        session.close();
+       if (client == null){
+           throw new IllegalArgumentException("invalid email!");
+        }
         return client;
     }
 
